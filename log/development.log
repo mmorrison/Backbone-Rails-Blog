@@ -1,0 +1,2360 @@
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (2.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (2.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePosts (20120202045735)
+  [1m[35m (0.6ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120202045735')[0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("posts")
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-02-01 23:02:38 -0600
+Served asset /rails.png - 200 OK (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-01 23:04:34 -0600
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+
+Rendered /Users/marcus/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (15.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-01 23:08:10 -0600
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+
+Rendered /Users/marcus/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:08:52 -0600
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Rendered posts/index.html.erb within layouts/application (0.4ms)
+Compiled application.css  (2ms)  (pid 788)
+Compiled posts.css  (8ms)  (pid 788)
+Compiled scaffolds.css  (17ms)  (pid 788)
+Compiled application.js  (31ms)  (pid 788)
+Compiled jquery.js  (4ms)  (pid 788)
+Compiled jquery_ujs.js  (0ms)  (pid 788)
+Compiled underscore.js  (0ms)  (pid 788)
+Compiled backbone.js  (0ms)  (pid 788)
+Compiled backbone_rails_blog.js  (427ms)  (pid 788)
+Compiled posts/index.js  (210ms)  (pid 788)
+Compiled posts/item.js  (200ms)  (pid 788)
+Compiled models/post.js  (190ms)  (pid 788)
+Compiled collections/posts.js  (186ms)  (pid 788)
+Compiled views/posts/posts_index.js  (273ms)  (pid 788)
+Compiled views/posts/posts_item.js  (253ms)  (pid 788)
+Compiled routers/posts_router.js  (184ms)  (pid 788)
+Compiled posts.js  (221ms)  (pid 788)
+Completed 200 OK in 2435ms (Views: 2433.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+Rendered posts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /posts.css - 200 OK (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /scaffolds.css - 200 OK (10ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /jquery.js - 200 OK (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /jquery_ujs.js - 200 OK (7ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /underscore.js - 200 OK (11ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /backbone.js - 200 OK (11ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /backbone_rails_blog.js - 200 OK (27ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /posts/index.js - 200 OK (6ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /collections/posts.js - 200 OK (16ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /models/post.js - 200 OK (6ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /views/posts/posts_index.js - 200 OK (16ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /views/posts/posts_item.js - 200 OK (14ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /posts/item.js - 200 OK (10ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /routers/posts_router.js - 200 OK (7ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /posts.js - 200 OK (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /application.js - 200 OK (8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /underscore.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /views/posts/posts_item.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /posts/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /collections/posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /backbone_rails_blog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /models/post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /views/posts/posts_index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /routers/posts_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /posts/item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:08:55 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:09:01 -0600
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Rendered posts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:09:01 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:01 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:09:01 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:09:01 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:01 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:01 -0600
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:01 -0600
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:01 -0600
+Served asset /backbone_rails_blog.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:01 -0600
+Served asset /posts/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:01 -0600
+Served asset /posts/item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:01 -0600
+Served asset /models/post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:01 -0600
+Served asset /views/posts/posts_item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:01 -0600
+Served asset /routers/posts_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:01 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:01 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:01 -0600
+Served asset /views/posts/posts_index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:01 -0600
+Served asset /collections/posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:09:51 -0600
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled posts/index.js  (182ms)  (pid 788)
+Compiled application.js  (27ms)  (pid 788)
+Completed 200 OK in 240ms (Views: 238.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:51 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:09:51 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:09:51 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:09:51 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:51 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:51 -0600
+Served asset /posts/item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:51 -0600
+Served asset /backbone.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:51 -0600
+Served asset /backbone_rails_blog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:51 -0600
+Served asset /posts/index.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:51 -0600
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:51 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:52 -0600
+Served asset /routers/posts_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:52 -0600
+Served asset /collections/posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:52 -0600
+Served asset /models/post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:52 -0600
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:52 -0600
+Served asset /views/posts/posts_index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:09:52 -0600
+Served asset /views/posts/posts_item.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:10:25 -0600
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled collections/posts.js  (183ms)  (pid 788)
+Compiled application.js  (33ms)  (pid 788)
+Completed 200 OK in 249ms (Views: 246.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:10:25 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:10:25 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:10:25 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:25 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:25 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:25 -0600
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:25 -0600
+Served asset /models/post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:25 -0600
+Served asset /backbone_rails_blog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:25 -0600
+Served asset /posts/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:25 -0600
+Served asset /posts/item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:26 -0600
+Served asset /backbone.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:26 -0600
+Served asset /collections/posts.js - 200 OK (12ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:26 -0600
+Served asset /views/posts/posts_index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:26 -0600
+Served asset /routers/posts_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:26 -0600
+Served asset /views/posts/posts_item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:26 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:26 -0600
+Served asset /application.js - 200 OK (54ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:10:43 -0600
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled routers/posts_router.js  (189ms)  (pid 788)
+Compiled application.js  (24ms)  (pid 788)
+Completed 200 OK in 248ms (Views: 246.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:10:44 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:44 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:10:44 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:44 -0600
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:44 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:10:44 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:44 -0600
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:44 -0600
+Served asset /collections/posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:44 -0600
+Served asset /posts/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:44 -0600
+Served asset /posts/item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:44 -0600
+Served asset /models/post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:44 -0600
+Served asset /views/posts/posts_index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:44 -0600
+Served asset /backbone_rails_blog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:44 -0600
+Served asset /views/posts/posts_item.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:44 -0600
+Served asset /routers/posts_router.js - 200 OK (5ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:44 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:10:44 -0600
+Served asset /application.js - 200 OK (9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:10:44 -0600
+  Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:14:49 -0600
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled routers/posts_router.js  (192ms)  (pid 788)
+Compiled application.js  (27ms)  (pid 788)
+Compiled posts/new.js  (198ms)  (pid 788)
+Compiled views/posts/posts_new.js  (185ms)  (pid 788)
+Completed 200 OK in 648ms (Views: 646.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/posts/new.js?body=1" for 127.0.0.1 at 2012-02-01 23:14:50 -0600
+Served asset /posts/new.js - 200 OK (7ms)
+
+
+Started GET "/assets/views/posts/posts_new.js?body=1" for 127.0.0.1 at 2012-02-01 23:14:50 -0600
+Served asset /views/posts/posts_new.js - 200 OK (7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:14:50 -0600
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:14:50 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:14:50 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:14:50 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:14:50 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:14:50 -0600
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:14:50 -0600
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:14:50 -0600
+Served asset /backbone_rails_blog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:14:50 -0600
+Served asset /posts/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:14:50 -0600
+Served asset /models/post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:14:50 -0600
+Served asset /collections/posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:14:50 -0600
+Served asset /views/posts/posts_index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:14:50 -0600
+Served asset /views/posts/posts_item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:14:50 -0600
+Served asset /routers/posts_router.js - 200 OK (3ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:14:50 -0600
+Served asset /posts/item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:14:50 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:14:50 -0600
+Served asset /application.js - 200 OK (8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:14:50 -0600
+  Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-02-01 23:15:00 -0600
+  Processing by PostsController#create as JSON
+  Parameters: {"title"=>"Test", "body"=>"This is a test", "post"=>{"title"=>"Test", "body"=>"This is a test"}}
+  [1m[35mSQL (55.6ms)[0m  INSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["body", "This is a test"], ["created_at", Thu, 02 Feb 2012 05:15:00 UTC +00:00], ["title", "Test"], ["updated_at", Thu, 02 Feb 2012 05:15:00 UTC +00:00]]
+Completed 201 Created in 87ms (Views: 3.9ms | ActiveRecord: 55.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:15:00 -0600
+  Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled views/posts/posts_index.js  (184ms)  (pid 788)
+Compiled application.js  (26ms)  (pid 788)
+Completed 200 OK in 244ms (Views: 242.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+Served asset /backbone_rails_blog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+Served asset /posts/item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+Served asset /posts/index.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/posts/new.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+Served asset /posts/new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+Served asset /collections/posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+Served asset /models/post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+Served asset /views/posts/posts_item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+Served asset /views/posts/posts_index.js - 200 OK (5ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+Served asset /routers/posts_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_new.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+Served asset /views/posts/posts_new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+Served asset /application.js - 200 OK (62ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:15:27 -0600
+  Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-02-01 23:15:30 -0600
+  Processing by PostsController#create as JSON
+  Parameters: {"title"=>"adfads", "body"=>"asdfads", "post"=>{"title"=>"adfads", "body"=>"asdfads"}}
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["body", "asdfads"], ["created_at", Thu, 02 Feb 2012 05:15:30 UTC +00:00], ["title", "adfads"], ["updated_at", Thu, 02 Feb 2012 05:15:30 UTC +00:00]]
+Completed 201 Created in 13ms (Views: 2.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:15:30 -0600
+  Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+Rendered posts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+Served asset /posts.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+Served asset /underscore.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+Served asset /models/post.js - 200 OK (0ms)
+
+
+Started GET "/assets/posts/new.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+Served asset /posts/new.js - 200 OK (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+Served asset /backbone.js - 200 OK (0ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+Served asset /collections/posts.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+Served asset /views/posts/posts_index.js - 200 OK (0ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+Served asset /posts/index.js - 200 OK (5ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+Served asset /posts/item.js - 200 OK (0ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+Served asset /backbone_rails_blog.js - 200 OK (2ms)
+
+
+Started GET "/assets/views/posts/posts_new.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+Served asset /views/posts/posts_new.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+Served asset /views/posts/posts_item.js - 200 OK (0ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+Served asset /routers/posts_router.js - 200 OK (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+Served asset /posts.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:15:52 -0600
+  Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-02-01 23:16:05 -0600
+  Processing by PostsController#create as JSON
+  Parameters: {"title"=>"This is new post", "body"=>"New Post", "post"=>{"title"=>"This is new post", "body"=>"New Post"}}
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["body", "New Post"], ["created_at", Thu, 02 Feb 2012 05:16:05 UTC +00:00], ["title", "This is new post"], ["updated_at", Thu, 02 Feb 2012 05:16:05 UTC +00:00]]
+Completed 201 Created in 12ms (Views: 2.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:16:05 -0600
+  Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:18:54 -0600
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled views/posts/posts_new.js  (190ms)  (pid 788)
+Completed 500 Internal Server Error in 281ms
+
+ActionView::Template::Error (couldn't find file 'jquery-validation-1.9.0/jquery.validate'
+  (in /Users/marcus/Development/Backbone-Rails-Blog/app/assets/javascripts/application.js:11)):
+    3:   <head>
+    4:     <title>Blog</title>
+    5:     <%= stylesheet_link_tag    "application" %>
+    6:     <%= javascript_include_tag "application" %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9:   <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__3219278097254436998_70251470527360'
+  app/controllers/posts_controller.rb:7:in `index'
+
+Rendered /Users/marcus/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /Users/marcus/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+Rendered /Users/marcus/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:20:39 -0600
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Rendered posts/index.html.erb within layouts/application (15.8ms)
+Compiled application.js  (26ms)  (pid 875)
+Compiled jquery-validation-1.9.0/jquery.validate.js  (1ms)  (pid 875)
+Completed 200 OK in 169ms (Views: 167.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:20:40 -0600
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery-validation-1.9.0/jquery.validate.js?body=1" for 127.0.0.1 at 2012-02-01 23:20:40 -0600
+Served asset /jquery-validation-1.9.0/jquery.validate.js - 200 OK (7ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:20:40 -0600
+Served asset /posts.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:20:40 -0600
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:20:40 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:20:40 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:20:41 -0600
+Served asset /underscore.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:20:41 -0600
+Served asset /backbone.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:20:41 -0600
+Served asset /backbone_rails_blog.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:20:41 -0600
+Served asset /posts/index.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:20:41 -0600
+Served asset /posts/item.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:20:41 -0600
+Served asset /models/post.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts/new.js?body=1" for 127.0.0.1 at 2012-02-01 23:20:41 -0600
+Served asset /posts/new.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:20:41 -0600
+Served asset /collections/posts.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:20:41 -0600
+Served asset /views/posts/posts_index.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:20:41 -0600
+Served asset /views/posts/posts_item.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/views/posts/posts_new.js?body=1" for 127.0.0.1 at 2012-02-01 23:20:41 -0600
+Served asset /views/posts/posts_new.js - 200 OK (4ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:20:41 -0600
+Served asset /routers/posts_router.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:20:41 -0600
+Served asset /posts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:20:41 -0600
+Served asset /application.js - 200 OK (7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:20:41 -0600
+  Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 54ms (Views: 52.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-02-01 23:20:50 -0600
+  Processing by PostsController#create as JSON
+  Parameters: {"title"=>"Test", "body"=>"Test\n", "post"=>{"title"=>"Test", "body"=>"Test\n"}}
+  [1m[36mSQL (16.1ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "Test\n"], ["created_at", Thu, 02 Feb 2012 05:20:50 UTC +00:00], ["title", "Test"], ["updated_at", Thu, 02 Feb 2012 05:20:50 UTC +00:00]]
+Completed 201 Created in 38ms (Views: 2.5ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:20:50 -0600
+  Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:23:37 -0600
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled routers/posts_router.js  (192ms)  (pid 875)
+Compiled application.js  (33ms)  (pid 875)
+Compiled posts/show.js  (217ms)  (pid 875)
+Compiled views/posts/posts_show.js  (183ms)  (pid 875)
+Completed 200 OK in 680ms (Views: 677.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/views/posts/posts_show.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /views/posts/posts_show.js - 200 OK (24ms)
+
+
+Started GET "/assets/posts/show.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /posts/show.js - 200 OK (6ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-validation-1.9.0/jquery.validate.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /jquery-validation-1.9.0/jquery.validate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /backbone_rails_blog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /posts/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/new.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /posts/new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /models/post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /posts/item.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /collections/posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /views/posts/posts_item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /views/posts/posts_index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_new.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /views/posts/posts_new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /routers/posts_router.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /application.js - 200 OK (9ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:23:38 -0600
+  Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Rendered posts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /posts/index.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery-validation-1.9.0/jquery.validate.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /jquery-validation-1.9.0/jquery.validate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /backbone_rails_blog.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /posts/item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/new.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /posts/new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/show.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /posts/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /models/post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /collections/posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /views/posts/posts_index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /views/posts/posts_item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_new.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /views/posts/posts_new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_show.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /views/posts/posts_show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:23:39 -0600
+  Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-02-01 23:23:45 -0600
+  Processing by PostsController#create as JSON
+  Parameters: {"title"=>"test", "body"=>"akdsfjads\n", "post"=>{"title"=>"test", "body"=>"akdsfjads\n"}}
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "akdsfjads\n"], ["created_at", Thu, 02 Feb 2012 05:23:46 UTC +00:00], ["title", "test"], ["updated_at", Thu, 02 Feb 2012 05:23:46 UTC +00:00]]
+Completed 201 Created in 13ms (Views: 2.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:23:46 -0600
+  Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Rendered posts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /backbone_rails_blog.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-validation-1.9.0/jquery.validate.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /jquery-validation-1.9.0/jquery.validate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /posts/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /posts/item.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/posts/new.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /posts/new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/show.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /posts/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /models/post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /collections/posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /views/posts/posts_index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /views/posts/posts_item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_new.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /views/posts/posts_new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_show.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /views/posts/posts_show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /routers/posts_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:24:22 -0600
+  Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Rendered posts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-validation-1.9.0/jquery.validate.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /jquery-validation-1.9.0/jquery.validate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /backbone_rails_blog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/new.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /posts/new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /posts/item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/show.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /posts/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /posts/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /collections/posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /models/post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_new.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /views/posts/posts_new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_show.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /views/posts/posts_show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /views/posts/posts_item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /views/posts/posts_index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /routers/posts_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:24:26 -0600
+  Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Rendered posts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /posts.css - 200 OK (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /underscore.js - 200 OK (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /backbone.js - 200 OK (10ms)
+
+
+Started GET "/assets/jquery-validation-1.9.0/jquery.validate.js?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /jquery-validation-1.9.0/jquery.validate.js - 200 OK (0ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /posts/item.js - 200 OK (3ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /backbone_rails_blog.js - 200 OK (0ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /posts/index.js - 200 OK (7ms)
+
+
+Started GET "/assets/posts/new.js?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /posts/new.js - 200 OK (19ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /collections/posts.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /models/post.js - 200 OK (0ms)
+
+
+Started GET "/assets/posts/show.js?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /posts/show.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /views/posts/posts_index.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /views/posts/posts_item.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/posts/posts_new.js?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /views/posts/posts_new.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/posts/posts_show.js?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /views/posts/posts_show.js - 200 OK (0ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /routers/posts_router.js - 200 OK (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /posts.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:27:58 -0600
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:27:59 -0600
+  Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-01 23:28:02 -0600
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+
+Rendered /Users/marcus/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-01 23:28:05 -0600
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+
+Rendered /Users/marcus/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-01 23:28:12 -0600
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+
+Rendered /Users/marcus/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-01 23:28:36 -0600
+
+ArgumentError (missing :action):
+  config/routes.rb:53:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+Rendered /Users/marcus/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+Rendered /Users/marcus/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+Rendered /Users/marcus/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-01 23:28:38 -0600
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+
+Rendered /Users/marcus/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-01 23:28:38 -0600
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+
+Rendered /Users/marcus/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-01 23:29:52 -0600
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+
+Rendered /Users/marcus/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (15.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-01 23:29:53 -0600
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+
+Rendered /Users/marcus/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:30:01 -0600
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:01 -0600
+Served asset /backbone_rails_blog.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:01 -0600
+Served asset /posts/index.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:02 -0600
+Served asset /posts/item.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/posts/new.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:02 -0600
+Served asset /posts/new.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/posts/show.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:02 -0600
+Served asset /posts/show.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:02 -0600
+Served asset /views/posts/posts_index.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:02 -0600
+Served asset /collections/posts.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:02 -0600
+Served asset /views/posts/posts_item.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/views/posts/posts_new.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:02 -0600
+Served asset /views/posts/posts_new.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/views/posts/posts_show.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:02 -0600
+Served asset /views/posts/posts_show.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:02 -0600
+Served asset /routers/posts_router.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:02 -0600
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:30:02 -0600
+  Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-02-01 23:30:08 -0600
+  Processing by PostsController#create as JSON
+  Parameters: {"title"=>"adsfasdf", "body"=>"adfadsf", "post"=>{"title"=>"adsfasdf", "body"=>"adfadsf"}}
+  [1m[36mSQL (16.3ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "adfadsf"], ["created_at", Thu, 02 Feb 2012 05:30:08 UTC +00:00], ["title", "adsfasdf"], ["updated_at", Thu, 02 Feb 2012 05:30:08 UTC +00:00]]
+Completed 201 Created in 29ms (Views: 2.5ms | ActiveRecord: 16.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:30:08 -0600
+  Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Rendered posts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /posts.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /underscore.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /backbone.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery-validation-1.9.0/jquery.validate.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /jquery-validation-1.9.0/jquery.validate.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /backbone_rails_blog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /posts/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /posts/item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/new.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /posts/new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/show.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /posts/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /collections/posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /models/post.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/views/posts/posts_new.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /views/posts/posts_new.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /views/posts/posts_item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /views/posts/posts_index.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /posts.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/views/posts/posts_show.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /views/posts/posts_show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /routers/posts_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:30:13 -0600
+  Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 60ms (Views: 57.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled views/posts/posts_index.js  (193ms)  (pid 889)
+Compiled application.js  (32ms)  (pid 889)
+Completed 200 OK in 265ms (Views: 262.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-validation-1.9.0/jquery.validate.js?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /jquery-validation-1.9.0/jquery.validate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /backbone_rails_blog.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /posts/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /posts/item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/new.js?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /posts/new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /models/post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /collections/posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /views/posts/posts_index.js - 200 OK (11ms)
+
+
+Started GET "/assets/posts/show.js?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /posts/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /views/posts/posts_item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_new.js?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /views/posts/posts_new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /routers/posts_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_show.js?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /views/posts/posts_show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:32:12 -0600
+Served asset /application.js - 200 OK (56ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:32:13 -0600
+  Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:34:06 -0600
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Rendered posts/index.html.erb within layouts/application (0.1ms)
+Compiled routers/posts_router.js  (201ms)  (pid 889)
+Compiled application.js  (36ms)  (pid 889)
+Completed 200 OK in 278ms (Views: 275.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:34:06 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:34:06 -0600
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:34:06 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:34:06 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:34:06 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-validation-1.9.0/jquery.validate.js?body=1" for 127.0.0.1 at 2012-02-01 23:34:06 -0600
+Served asset /jquery-validation-1.9.0/jquery.validate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:34:06 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:34:06 -0600
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/show.js?body=1" for 127.0.0.1 at 2012-02-01 23:34:06 -0600
+Served asset /posts/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:34:06 -0600
+Served asset /posts/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:34:06 -0600
+Served asset /posts/item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:34:06 -0600
+Served asset /backbone_rails_blog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:34:06 -0600
+Served asset /models/post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/new.js?body=1" for 127.0.0.1 at 2012-02-01 23:34:07 -0600
+Served asset /posts/new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:34:07 -0600
+Served asset /views/posts/posts_index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:34:07 -0600
+Served asset /collections/posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_new.js?body=1" for 127.0.0.1 at 2012-02-01 23:34:07 -0600
+Served asset /views/posts/posts_new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:34:07 -0600
+Served asset /views/posts/posts_item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_show.js?body=1" for 127.0.0.1 at 2012-02-01 23:34:07 -0600
+Served asset /views/posts/posts_show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:34:07 -0600
+Served asset /routers/posts_router.js - 200 OK (5ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:34:07 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:34:07 -0600
+Served asset /application.js - 200 OK (8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:34:07 -0600
+  Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:38:13 -0600
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Rendered posts/index.html.erb within layouts/application (0.1ms)
+Compiled views/posts/posts_index.js  (287ms)  (pid 889)
+Compiled views/posts/posts_item.js  (218ms)  (pid 889)
+Compiled routers/posts_router.js  (195ms)  (pid 889)
+Compiled application.js  (47ms)  (pid 889)
+Completed 200 OK in 886ms (Views: 880.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /underscore.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /backbone_rails_blog.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-validation-1.9.0/jquery.validate.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /jquery-validation-1.9.0/jquery.validate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /posts/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /posts/item.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts/new.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /posts/new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /models/post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/show.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /posts/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /views/posts/posts_index.js - 200 OK (6ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /collections/posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /views/posts/posts_item.js - 200 OK (22ms)
+
+
+Started GET "/assets/views/posts/posts_new.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /views/posts/posts_new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /routers/posts_router.js - 200 OK (8ms)
+
+
+Started GET "/assets/views/posts/posts_show.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /views/posts/posts_show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+Served asset /application.js - 200 OK (11ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:38:14 -0600
+  Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2012-02-01 23:38:18 -0600
+  Processing by PostsController#show as JSON
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "6"]]
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2012-02-01 23:38:22 -0600
+  Processing by PostsController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:38:23 -0600
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Rendered posts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-validation-1.9.0/jquery.validate.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /jquery-validation-1.9.0/jquery.validate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /backbone_rails_blog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /posts/index.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /posts/item.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/posts/new.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /posts/new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/show.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /posts/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /models/post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /collections/posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /views/posts/posts_index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /views/posts/posts_item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_new.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /views/posts/posts_new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_show.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /views/posts/posts_show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /routers/posts_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2012-02-01 23:38:24 -0600
+  Processing by PostsController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:38:42 -0600
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled views/posts/posts_show.js  (185ms)  (pid 889)
+Compiled application.js  (37ms)  (pid 889)
+Completed 200 OK in 318ms (Views: 315.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:42 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:42 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:38:42 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:42 -0600
+Served asset /backbone.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:42 -0600
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:38:42 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-validation-1.9.0/jquery.validate.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:42 -0600
+Served asset /jquery-validation-1.9.0/jquery.validate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:42 -0600
+Served asset /backbone_rails_blog.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:38:42 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:42 -0600
+Served asset /posts/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:42 -0600
+Served asset /posts/item.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/posts/new.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:43 -0600
+Served asset /posts/new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/show.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:43 -0600
+Served asset /posts/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:43 -0600
+Served asset /models/post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:43 -0600
+Served asset /collections/posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:43 -0600
+Served asset /views/posts/posts_item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:43 -0600
+Served asset /views/posts/posts_index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_new.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:43 -0600
+Served asset /views/posts/posts_new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_show.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:43 -0600
+Served asset /views/posts/posts_show.js - 200 OK (4ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:43 -0600
+Served asset /routers/posts_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:43 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:38:43 -0600
+Served asset /application.js - 200 OK (9ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2012-02-01 23:38:43 -0600
+  Processing by PostsController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:38:44 -0600
+  Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2012-02-01 23:38:46 -0600
+  Processing by PostsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Rendered posts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-validation-1.9.0/jquery.validate.js?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /jquery-validation-1.9.0/jquery.validate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_rails_blog.js?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /backbone_rails_blog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/index.js?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /posts/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/item.js?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /posts/item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/show.js?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /posts/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/post.js?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /models/post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/collections/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /collections/posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_index.js?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /views/posts/posts_index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_item.js?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /views/posts/posts_item.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_new.js?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /views/posts/posts_new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts/new.js?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /posts/new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/posts/posts_show.js?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /views/posts/posts_show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routers/posts_router.js?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /routers/posts_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2012-02-01 23:39:09 -0600
+  Processing by PostsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.6ms)
